@@ -1,0 +1,17 @@
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_mode</span>(<span style="color: #666666">*</span>args):
+    <span style="color: #BA2121; font-style: italic">'''Returns the highest occurred parameter and its count'''</span>
+    
+    counter <span style="color: #666666">=</span> {} <span style="color: #408080; font-style: italic"># Initiates an empty dictionary to hold parameter:count items</span>
+    <span style="color: #008000; font-weight: bold">for</span> p <span style="color: #AA22FF; font-weight: bold">in</span> args: <span style="color: #408080; font-style: italic"># Iterates over all parameters</span>
+        <span style="color: #008000; font-weight: bold">if</span> p <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #AA22FF; font-weight: bold">in</span> counter<span style="color: #666666">.</span>keys(): <span style="color: #408080; font-style: italic"># Checks if the parameter is already in counter</span>
+            counter[p] <span style="color: #666666">=</span> <span style="color: #666666">1</span> <span style="color: #408080; font-style: italic"># If not, creates the key with value 1</span>
+        <span style="color: #008000; font-weight: bold">else</span>:
+            counter[p] <span style="color: #666666">+=</span> <span style="color: #666666">1</span> <span style="color: #408080; font-style: italic"># If it is, add 1 to the count</span>
+    
+    curr_max <span style="color: #666666">=</span> (<span style="color: #666666">0</span>, <span style="color: #666666">0</span>) <span style="color: #408080; font-style: italic"># We initiate a tuple with 2 items to hold the mode</span>
+    <span style="color: #008000; font-weight: bold">for</span> k,v <span style="color: #AA22FF; font-weight: bold">in</span> counter<span style="color: #666666">.</span>items(): <span style="color: #408080; font-style: italic"># Iterate all the parameter:count we have in the counter</span>
+        <span style="color: #008000; font-weight: bold">if</span> v <span style="color: #666666">&gt;</span> curr_max[<span style="color: #666666">1</span>]: <span style="color: #408080; font-style: italic"># Should the count of the parameter be greate then the current max</span>
+            curr_max <span style="color: #666666">=</span> (k,v) <span style="color: #408080; font-style: italic"># Replaces it</span>
+            
+    <span style="color: #008000; font-weight: bold">return</span> curr_max
+</pre></div>

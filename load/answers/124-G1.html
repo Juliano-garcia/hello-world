@@ -1,0 +1,18 @@
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">upper_all</span>(sentence):
+    <span style="color: #BA2121; font-style: italic">'''Function that upper-case all first letters with exception of escape words'''</span>
+    
+    words <span style="color: #666666">=</span> sentence<span style="color: #666666">.</span>split(<span style="color: #BA2121">' '</span>) <span style="color: #408080; font-style: italic"># We start of by spliting the words in a list</span>
+    escape_words <span style="color: #666666">=</span> [<span style="color: #BA2121">'a'</span>, <span style="color: #BA2121">'the'</span>, <span style="color: #BA2121">'of'</span>, <span style="color: #BA2121">'to'</span>] <span style="color: #408080; font-style: italic"># Define the scape words in lower case</span>
+    new_words <span style="color: #666666">=</span> [] <span style="color: #408080; font-style: italic"># Initiate a list to haold the new words</span>
+    
+    <span style="color: #008000; font-weight: bold">for</span> word <span style="color: #AA22FF; font-weight: bold">in</span> words: <span style="color: #408080; font-style: italic"># Iterate over all words in the passed sentence</span>
+        <span style="color: #008000; font-weight: bold">if</span> word<span style="color: #666666">.</span>lower() <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #AA22FF; font-weight: bold">in</span> escape_words: <span style="color: #408080; font-style: italic"># We check if the lower-cased word is in the escape words list</span>
+            new_word <span style="color: #666666">=</span> word[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>upper() <span style="color: #666666">+</span> word[<span style="color: #666666">1</span>:]<span style="color: #666666">.</span>lower() <span style="color: #408080; font-style: italic"># Upper-case the first letter and lower the rest</span>
+        <span style="color: #008000; font-weight: bold">else</span>:
+            new_word <span style="color: #666666">=</span> word<span style="color: #666666">.</span>lower() <span style="color: #408080; font-style: italic"># If escape words, we lower-case it</span>
+        new_words<span style="color: #666666">.</span>append(new_word) <span style="color: #408080; font-style: italic"># Append to the new list</span>
+        
+    new_sentence <span style="color: #666666">=</span> <span style="color: #BA2121">' '</span><span style="color: #666666">.</span>join(new_words) <span style="color: #408080; font-style: italic"># Join all elements of the list with space as separator</span>
+    
+    <span style="color: #008000; font-weight: bold">return</span> new_sentence
+</pre></div>

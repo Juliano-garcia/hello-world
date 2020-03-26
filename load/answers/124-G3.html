@@ -1,0 +1,5 @@
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>quarter <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">lambda</span> x: <span style="color: #BA2121">'Q</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">/</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">'</span><span style="color: #666666">.</span>format(roundup(<span style="color: #008000">int</span>(x<span style="color: #666666">.</span>split(<span style="color: #BA2121">'/'</span>)[<span style="color: #666666">0</span>])<span style="color: #666666">/3</span>), x[<span style="color: #666666">-2</span>:])
+<span style="color: #408080; font-style: italic"># We define a string with the format we want and the placeholders for the Q number and Year number</span>
+<span style="color: #408080; font-style: italic"># Inside the format method, for the Q number we need to divide it by 3 and round it up</span>
+<span style="color: #408080; font-style: italic"># For the year number we can just take the last 2 digits of the passed string</span>
+</pre></div>

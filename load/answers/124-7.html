@@ -1,0 +1,17 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Block</span>:
+    <span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;A class for block objects&#39;&#39;&#39;</span>
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, height, length, depth):
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>height <span style="color: #666666">=</span> height
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>length <span style="color: #666666">=</span> length
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>depth <span style="color: #666666">=</span> depth
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_volume</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;Method to calculate total volume&#39;&#39;&#39;</span>
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>height <span style="color: #666666">*</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>length <span style="color: #666666">*</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>depth
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">cubed</span>(<span style="color: #008000">self</span>, volume):
+        <span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;Method to transform the block in a cube based on passed volume&#39;&#39;&#39;</span>
+        edge <span style="color: #666666">=</span> volume<span style="color: #666666">**</span>(<span style="color: #666666">1/3</span>) <span style="color: #408080; font-style: italic"># Cube root to get edge size</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>height <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>length <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>depth <span style="color: #666666">=</span> edge
+</pre></div>

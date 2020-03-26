@@ -1,0 +1,26 @@
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Car</span>:
+    <span style="color: #BA2121; font-style: italic">'''Class to represent a car object'''</span>
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, brand, model, year, top_speed, weight):
+        <span style="color: #BA2121; font-style: italic">'''Initiate class and assign atributes'''</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>brand <span style="color: #666666">=</span> brand
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>model <span style="color: #666666">=</span> model
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>year <span style="color: #666666">=</span> year
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>top_speed <span style="color: #666666">=</span> top_speed
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>weight <span style="color: #666666">=</span> weight
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>sw_ratio <span style="color: #666666">=</span> top_speed <span style="color: #666666">/</span> (weight <span style="color: #666666">*</span> <span style="color: #666666">1000</span>)
+        
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_title</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">'''Returns the Car Title'''</span>
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>brand <span style="color: #666666">+</span> <span style="color: #BA2121">" "</span> <span style="color: #666666">+</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>model <span style="color: #666666">+</span> <span style="color: #BA2121">" "</span> <span style="color: #666666">+</span> <span style="color: #008000">str</span>(<span style="color: #008000">self</span><span style="color: #666666">.</span>year)
+    
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">set_mileage</span>(<span style="color: #008000">self</span>, mileage):
+        <span style="color: #BA2121; font-style: italic">'''Defines current mileage'''</span>
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>mileage <span style="color: #666666">=</span> mileage
+        
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_future_mileage</span>(<span style="color: #008000">self</span>, current_year, future_year):
+        <span style="color: #BA2121; font-style: italic">'''Estimates a future mileage'''</span>
+        yearly_mileage <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>mileage <span style="color: #666666">/</span> (current_year <span style="color: #666666">-</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>year)
+        additional_mileage <span style="color: #666666">=</span> (future_year <span style="color: #666666">-</span> current_year) <span style="color: #666666">*</span> yearly_mileage
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>mileage <span style="color: #666666">+</span> additional_mileage
+</pre></div>
