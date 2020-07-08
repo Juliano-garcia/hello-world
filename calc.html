@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form name="formcalc">
+
+            Dawn Vengeance CDR%: <input type="number" name="dawn" min=50 max=65 oninput="getCDR()">
+            <br>
+            Inventory CDR%: <input type="number" name="inventory" value=77.778 max=100 readonly>
+
+        </form>
+        <script type="text/javascript">
+
+            function getCDR()
+            {
+                var dawn, inventory;
+                dawn=Number(document.formcalc.dawn.value);
+                inventory=Math.round(1000*(100*(9*dawn-700))/(9*(dawn-100)))/1000;
+                document.formcalc.inventory.value=inventory;
+            }
+
+        </script>
+    </body>
+</html>
